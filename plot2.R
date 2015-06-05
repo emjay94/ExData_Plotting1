@@ -26,3 +26,9 @@ powerconsump2days$date.time <- strptime(paste(powerconsump2days$date, powerconsu
 #save the .RData image file
 save(powerconsump2days, file="powerconsump2days.RData")
 View(powerconsump2days)
+
+#create the plot and save it to the "plot2.png" file
+png("plot2.png")
+plot(powerconsump2days$date.time, powerconsump2days$global.active.power, type="l", xlab="", ylab="Global Active Power (kilowatts)")
+#X-axis label presents the day abbreviations in locale
+dev.off()
