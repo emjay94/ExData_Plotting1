@@ -35,8 +35,9 @@ attach(powerconsump2days)
 png("plot4.png")
 
 #set graphical parameters for the current device
-par(mfcol=c(2, 2), pty="s")
+par(mfcol=c(2, 2))
 
+#create 4 plot figures that will be drawn in an 2-by-2 array on the device by columns
 plot(date.time, global.active.power, type="l", xlab="", ylab="Global Active Power (kilowatts)")
 plot(date.time, sub.metering.1, type="l", xlab="", ylab="Energy sub metering")
 lines(date.time, sub.metering.2, type="l", col="red")
