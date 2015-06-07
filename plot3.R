@@ -32,5 +32,6 @@ png("plot3.png")
 plot(powerconsump2days$date.time, powerconsump2days$sub.metering.1, type="l", xlab="", ylab="Energy sub metering")
 lines(powerconsump2days$date.time, powerconsump2days$sub.metering.2, type="l", col="red")
 lines(powerconsump2days$date.time, powerconsump2days$sub.metering.3, type="l", col="blue")
-
+#add legends on the top right corner of the plot
+legend("topright", lty=c(1, 1, 1), col=c("black", "red", "blue"), legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
 dev.off()
